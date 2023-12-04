@@ -12,21 +12,44 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.DefaultSecurityFilterChain;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
 public class WebSecurityConfig {
+
+    private static final String [] WHITELIST = {
+
+        "/",
+        "/login",
+        "/register",
+        "/css/**",
+        "fonts/**",
+        "/images/**",
+        "js/**",
+
+    };
 	 @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("/users/save","/product/add","/products/all","/").permitAll()
+                        .requestMatchers(WHITELIST).permitAll()
                         .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
-                .formLogin(Customizer.withDefaults())
+                .formLogin(login -> login
+                .loginPage("/login")
+                .loginProcessingUrl("/login")
+                .usernameParameter("email")
+                .passwordParameter("password")
+                .defaultSuccessUrl("/", true)
+                .failureUrl("/login?error")
+                .permitAll())
+                .logout(logout -> logout
+                .logoutUrl("/")
+                .logoutSuccessUrl("/logout?success")
+                )
+                
                 .csrf(AbstractHttpConfigurer::disable);
         return http.build();
 

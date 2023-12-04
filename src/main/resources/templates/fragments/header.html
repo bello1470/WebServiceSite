@@ -32,15 +32,21 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
             <a class="nav-link" href="/login">Login</a>
           </li>
         </span>
-      
-      <span sec:authorize="isAuthenticated()">
+     <span sec:authorize="isAuthenticated()">
       <li class="nav-item">
         <a class="nav-link" href="/profile">Profile</a>
-      </li>
-     
+      </li> 
   </span>
-  
-          </ul>
+  <span sec:authorize="isAuthenticated()">
+    <li class="nav-item">
+      <a class="nav-link" href="/logout">logout</a>
+    </li> 
+<span sec:authorize="hasRole('ADMIN')">
+  <li class="nav-item">
+    <a class="nav-link" href="/admin">admin</a>
+  </li>
+</span>
+ </ul>
           <div class="user_option">
             <a href="" class="user_link">
               <i class="fa fa-user" aria-hidden="true"></i>

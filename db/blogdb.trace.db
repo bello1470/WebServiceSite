@@ -279,3 +279,42 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/USER/On
 	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
 	... 67 more
+2023-12-02 22:37:24.575848Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:24.575848Z jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:24.575848Z jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:24.575848Z jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:24.575848Z jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:24.575848Z jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:36.439450Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:36.439450Z jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:36.455095Z jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:36.455095Z jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:36.456094Z jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:36.456094Z jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
+2023-12-02 22:37:55.535114Z jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OURUSERS" not found; SQL statement:
+select * from ourusers where email = ?  [42102-224]
