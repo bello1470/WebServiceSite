@@ -46,8 +46,8 @@ public class WebSecurityConfig {
                 .failureUrl("/login?error")
                 .permitAll())
                 .logout(logout -> logout
-                .logoutUrl("/")
-                .logoutSuccessUrl("/logout?success")
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/")
                 )
                 
                 .csrf(AbstractHttpConfigurer::disable);

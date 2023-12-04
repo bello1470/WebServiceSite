@@ -27,6 +27,7 @@ public class OurUserInfoDetails implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.roles;
+        
     }
 
     @Override

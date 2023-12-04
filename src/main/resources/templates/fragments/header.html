@@ -41,11 +41,12 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <li class="nav-item">
       <a class="nav-link" href="/logout">logout</a>
     </li> 
-<span sec:authorize="hasRole('ADMIN')">
+<span sec:authorize="hasRole('ROLE_ADMIN')">
   <li class="nav-item">
     <a class="nav-link" href="/admin">admin</a>
   </li>
 </span>
+
  </ul>
           <div class="user_option">
             <a href="" class="user_link">
